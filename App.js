@@ -38,6 +38,7 @@ const styles = StyleSheet.create({
   contain : {
     flex : 1,
     backgroundColor : '#fff'
+
   }
 });
 
