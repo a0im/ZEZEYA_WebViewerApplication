@@ -1,5 +1,7 @@
 import React , {useState , useEffect} from 'react';
 import { WebView } from "react-native-webview";
+import DeviceInfo from 'react-native-device-info';
+
 import {
   StyleSheet,
   BackHandler,
@@ -58,6 +60,7 @@ const PageView = ({refViewObj}) => {
     <WebView
       injectedJavaScript={INJECTED_JAVASCRIPT}
       ref={refViewObj}
+      userAgent={DeviceInfo.getUserAgent()["_z"] + '/-webview-'}
       style={styles.ViewSize} 
       source={{uri : 'https://zezeya.com',}}
       setBuiltInZoomControls={false}
